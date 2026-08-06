@@ -1,0 +1,12 @@
+{
+    "actorSpecification": 1,
+    "name": "website-lead-extractor",
+    "title": "Website Lead Extractor - Emails, Phones & Social Profiles",
+    "description": "Crawl a company website and extract publicly listed emails, phone numbers, and social profile links (LinkedIn, X/Twitter, Facebook, Instagram, GitHub) as clean JSON.",
+    "version": "0.1",
+    "meta": {
+        "templateId": "custom-no-proxy"
+    },
+    "input": "./input_schema.json",
+    "dockerfile": "../Dockerfile"
+}

@@ -1,0 +1,34 @@
+{
+    "title": "Website Lead Extractor Input",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "startUrls": {
+            "title": "Website URLs",
+            "type": "array",
+            "editor": "requestListSources",
+            "description": "One or more website URLs to scan for contact info (e.g. company homepages).",
+            "prefill": [
+                { "url": "https://apify.com" }
+            ]
+        },
+        "maxDepth": {
+            "title": "Max crawl depth",
+            "type": "integer",
+            "editor": "number",
+            "description": "How many link-hops from each start URL to follow within the same domain (e.g. to reach a Contact or About page). 0 = only scan the start URL itself.",
+            "default": 1,
+            "minimum": 0,
+            "maximum": 3
+        },
+        "maxPagesPerDomain": {
+            "title": "Max pages per domain",
+            "type": "integer",
+            "editor": "number",
+            "description": "Safety cap on how many pages to visit per start domain.",
+            "default": 20,
+            "minimum": 1
+        }
+    },
+    "required": ["startUrls"]
+}
