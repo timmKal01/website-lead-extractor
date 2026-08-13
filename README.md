@@ -85,3 +85,9 @@ JS-rendered sites may need a browser-based crawler instead.
 - Only extracts information the site itself publishes publicly (e.g. a
   "Contact us" page) — it does not access anything gated behind a login.
 - Respects a per-domain page cap so it won't run away on large sites.
+
+## Related products
+
+- [Website Tech Stack Detector](https://github.com/timmKal01/website-tech-stack-detector) — see what a lead's site is built on before you pitch them
+- [Company Buying Signal Report](https://github.com/timmKal01/company-buying-signal-report) — combine contact info with hiring activity for a scored buying signal
+- [Company Hiring Tracker](https://github.com/timmKal01/company-hiring-tracker) — find companies actively hiring, then use this actor to get in touch
