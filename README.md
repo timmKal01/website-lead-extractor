@@ -10,18 +10,16 @@ GitHub) it finds, as clean JSON.
 
 Built for sales teams, recruiters, and researchers who need contact info from
 a list of company sites without manually opening each "Contact" or "About"
-page.
-
-> **Status:** live on Apify, pending public Store listing approval. Code and
-> README here are the source of truth in the meantime.
+page — a 50-domain prospect list that would take an SDR most of an afternoon
+to work by hand runs here in a couple of minutes.
 
 ## Run it
 
-Via the [Apify API](https://docs.apify.com/api/v2) (once the Store listing is
-approved, this works for anyone with an Apify account):
+Via the [Apify API](https://docs.apify.com/api/v2) — works for anyone with an
+Apify account:
 
 ```bash
-curl "https://api.apify.com/v2/acts/website-lead-extractor/run-sync-get-dataset-items?token=YOUR_APIFY_TOKEN" \
+curl "https://api.apify.com/v2/acts/m_ctim~website-lead-extractor/run-sync-get-dataset-items?token=YOUR_APIFY_TOKEN" \
   -X POST \
   -H "Content-Type: application/json" \
   -d '{
@@ -85,6 +83,12 @@ JS-rendered sites may need a browser-based crawler instead.
 - Only extracts information the site itself publishes publicly (e.g. a
   "Contact us" page) — it does not access anything gated behind a login.
 - Respects a per-domain page cap so it won't run away on large sites.
+
+## Pricing note
+
+Billed per **page where contact info was found** — a domain with no public
+contact info anywhere costs nothing, and a domain where 3 pages all list
+contact info costs the same as extracting it manually from all 3 yourself.
 
 ## Related products
 
