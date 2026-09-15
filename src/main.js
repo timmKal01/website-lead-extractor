@@ -4,7 +4,7 @@ import { CheerioCrawler } from 'crawlee';
 await Actor.init();
 
 const input = (await Actor.getInput()) ?? {};
-const { startUrls = [], maxDepth = 1, maxPagesPerDomain = 20 } = input;
+const { startUrls = [{ url: 'https://apify.com' }], maxDepth = 1, maxPagesPerDomain = 20 } = input;
 
 if (startUrls.length === 0) {
     throw new Error('No startUrls provided.');
@@ -22,6 +22,9 @@ const SOCIAL_DOMAINS = {
 };
 
 const IMAGE_EXT_RE = /\.(png|jpe?g|gif|svg|webp)(?:@|$)/i;
+
+/** Must match the event name configured in this Actor's pay-per-event pricing on Apify. */
+const CONTACT_INFO_FOUND_EVENT = 'contact-info-found';
 
 const pagesPerDomain = new Map();
 
@@ -56,6 +59,7 @@ const crawler = new CheerioCrawler({
                 phones,
                 socialProfiles,
             });
+            await Actor.charge({ eventName: CONTACT_INFO_FOUND_EVENT });
             log.info(`Found contact info on ${request.url}`, {
                 emails: emails.length,
                 phones: phones.length,

@@ -29,6 +29,5 @@
             "default": 20,
             "minimum": 1
         }
-    },
-    "required": ["startUrls"]
+    }
 }
