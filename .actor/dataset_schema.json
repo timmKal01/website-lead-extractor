@@ -1,0 +1,56 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "overview": {
+            "title": "Overview",
+            "transformation": {
+                "fields": [
+                    "url",
+                    "domain",
+                    "emails",
+                    "phones",
+                    "socialProfiles.twitter",
+                    "socialProfiles.linkedin",
+                    "socialProfiles.github"
+                ],
+                "flatten": [
+                    "socialProfiles"
+                ]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "url": {
+                        "label": "URL",
+                        "format": "link"
+                    },
+                    "domain": {
+                        "label": "Domain",
+                        "format": "text"
+                    },
+                    "emails": {
+                        "label": "Emails",
+                        "format": "array"
+                    },
+                    "phones": {
+                        "label": "Phones",
+                        "format": "array"
+                    },
+                    "socialProfiles.twitter": {
+                        "label": "Social profiles: twitter",
+                        "format": "link"
+                    },
+                    "socialProfiles.linkedin": {
+                        "label": "Social profiles: linkedin",
+                        "format": "link"
+                    },
+                    "socialProfiles.github": {
+                        "label": "Social profiles: GitHub",
+                        "format": "link"
+                    }
+                }
+            }
+        }
+    }
+}
