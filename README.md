@@ -84,5 +84,3 @@ contact info costs the same as extracting it manually from all 3 yourself.
 ## Related products
 
 - [Website Tech Stack Checker](https://apify.com/m_ctim/website-tech-stack-detector): see what a lead's site is built on before you pitch them
-- [Company Buying Signals](https://apify.com/m_ctim/company-buying-signal-report): combine contact info with hiring activity for a scored buying signal
-- [Company Job Openings Tracker](https://apify.com/m_ctim/company-hiring-tracker): find companies actively hiring, then use this actor to get in touch
