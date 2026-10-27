@@ -51,6 +51,7 @@ One record per page where contact info was found:
 
 ```json
 {
+  "rowType": "page",
   "url": "https://example.com/contact",
   "domain": "example.com",
   "emails": ["hello@example.com"],

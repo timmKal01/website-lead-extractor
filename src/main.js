@@ -102,6 +102,7 @@ const crawler = new CheerioCrawler({
 
         if (emails.length > 0 || phones.length > 0 || Object.keys(socialProfiles).length > 0) {
             await Actor.pushData({
+                rowType: 'page',
                 url: request.url,
                 domain,
                 emails,
